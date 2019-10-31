@@ -22,6 +22,16 @@ namespace LAB18_ASP_Net_Core_MVC.Controllers
             return View();
         }
 
+        public IActionResult Menu()
+        {
+            return View();
+        }
+
+        public IActionResult Music()
+        {
+            return View();
+        }
+
         public IActionResult Contact()
         {
             ViewData["Message"] = "Your contact page.";
