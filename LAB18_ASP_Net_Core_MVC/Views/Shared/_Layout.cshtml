@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - LAB18_ASP_Net_Core_MVC</title>
+
+    <environment include="Development">
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+        <link rel="stylesheet" href="~/css/site.css" />
+    </environment>
+    <environment exclude="Development">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+              asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
+              asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
+        <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
+    </environment>
+</head>
+<body>
+<div id="wrapper">
+    <header>
+        <h1>JavaJam Coffee House</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a asp-controller="Home" asp-action="Index">Index</a></li>
+            <li><a asp-controller="Home" asp-action="Menu">Menu</a></li>
+            <li>@Html.ActionLink("Music", "Music", "Music", null, new { id = "musicLink" })</li>
+            <li><a asp-controller="Jobs" asp-action="Index" class="myclass">Jobs</a></li>
+        </ul>
+    </nav>
+    <div id="content">
+        <main> @RenderBody()
+        </main>
+        <hr />
+        <footer>
+            Copyright &copy; 2018 JavaJam Coffee House<br />
+            <a href="mailto:JavaJam@nowhere.com">JavaJam@nowhere.com</a>
+        </footer>
+    </div>
+</div> @RenderSection("Scripts", required: false)
+</body>
+</html>
