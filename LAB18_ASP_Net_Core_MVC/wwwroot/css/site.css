@@ -123,3 +123,8 @@ header, nav, figure, footer {
     padding-bottom: 20px;
     float: left;
 }
+
+/* ReSharper disable once CssBrowserCompatibility */
+tr:nth-of-type(odd) {
+    background-color: #ccaa66;
+}
